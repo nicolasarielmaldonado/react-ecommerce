@@ -1,0 +1,35 @@
+.form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.search {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border: none;
+    font-size: 1.3em;
+    border-right: 2px solid grey;
+    height: 30px;
+    width: 80%;
+    padding-left: 0.6em;
+    outline: none;
+}
+
+.search-button {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border: none;
+    outline: none;
+    background-color: white;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lupa {
+    width: 18px;
+    height: 18px;
+    filter: invert(23%) sepia(6%) saturate(7%) hue-rotate(319deg) brightness(97%) contrast(85%);
+}

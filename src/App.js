@@ -1,25 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext } from 'react';
+import { Header } from './components/Header/Header'
+import { Trending } from './components/Trending/Trending';
+import { Categories } from './components/Categories/Categories';
+import { CardList } from './components/CardList/CardList';
 
-function App() {
+
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+import { useFetchItems } from './hooks/useFetchItems';
+
+export const ItemsContext = createContext();
+
+export function App() {
+
+  const dataFull = useFetchItems();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+    
+      <ItemsContext.Provider value={ dataFull }>
+
+        <Header />
+        
+        <Trending/>     
+
+        <Switch>
+          <Route exact path="/">
+            <div className="main-body">
+              <Categories/>
+              <CardList />
+            </div>
+          </Route>
+
+          <Route exact path="/mensclothing">
+            <div className="main-body">
+              <Categories/>
+              <CardList category={"men's clothing"}/>
+            </div>
+          </Route>
+
+          <Route exact path="/womensclothing">
+            <div className="main-body">
+              <Categories/>
+              <CardList category={"women's clothing"}/>
+            </div>
+          </Route>
+
+          <Route exact path="/jewelry">
+            <div className="main-body">
+              <Categories/>
+              <CardList category={"jewelery"}/>
+            </div>
+          </Route>
+
+          <Route exact path="/electronics">
+            <div className="main-body">
+              <Categories/>
+              <CardList category={"electronics"}/>
+            </div>
+          </Route>
+        
+          <Redirect to="/" />
+
+        </Switch>
+
+      </ItemsContext.Provider>
+
+    </Router>
+    </>
   );
 }
-
-export default App;
