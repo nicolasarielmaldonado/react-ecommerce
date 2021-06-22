@@ -1,9 +1,7 @@
 import {useContext, useEffect, useState} from 'react'
 import { ItemsContext } from '../App';
 
-
-
-export const useFilterItems = (category) => {
+export const useFilterItems = ( category ) => {
 
     const response = useContext( ItemsContext );
 
@@ -13,15 +11,15 @@ export const useFilterItems = (category) => {
     });
     
     useEffect(() => {
-        if (category === ""){
+        if ( category === "" ){
             setItems({
                 data: response,
                 loading: false
             });
         } else {
             let filteredData;
-            filteredData = response.filter(item => {
-                return (item.category === category);
+            filteredData = response.filter( item => {
+                return ( item.category === category );
             })
             setItems({
                 data: filteredData,
@@ -29,8 +27,7 @@ export const useFilterItems = (category) => {
             })
         }
         
-    }, [category, response])
-
+    }, [ category, response ])
 
     return items;
 }

@@ -1,14 +1,56 @@
 .header{
     height: 120px;
     width: 100%;
-    background-color: black;
+    background-color: var(--maincolor);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.logo{
-    display: inline;
-    color: white;
+.header-upcontain{
+    height: 62px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-upcontain img{
+    height: 28px;
+}
+
+.menu{
+    margin-right: 1em;
+    width: 32px;
+    filter: invert(26%) sepia(3%) saturate(3779%) hue-rotate(295deg) brightness(99%) contrast(86%);
+}
+
+.popup-window{
+    left:0;
+    top:0;
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    background-color: var(--maincolor);
+    opacity: .9;
+    z-index: 100;
+    border-bottom: 4px solid var(--fourthcolor);
+}
+
+.popup-none{
+    display: none;
+}
+
+.menu-off{
+    opacity: 0;
+}
+
+.cross-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 5%;
+    margin-top: 2.05em;
+    filter: invert(26%) sepia(3%) saturate(3779%) hue-rotate(295deg) brightness(99%) contrast(86%);
 }

@@ -1,0 +1,22 @@
+.container-error {
+    width: 80%;
+    margin: auto;
+    border: 1px solid grey;
+    border-radius: 30px;
+    padding: 25px;
+    margin-bottom: 15px;
+
+}
+
+.titulo {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.list-group {
+    padding: 15px;
+}
+
+.list-item {
+    margin-bottom: 10px;
+}

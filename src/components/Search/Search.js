@@ -1,35 +1,38 @@
-import React, { useContext, useState } from 'react'
-import { ItemsContext } from '../../App';
-import { useFilterItems } from '../../hooks/useFilterItems';
+import React, { useRef, useState } from 'react'
+import { Link } from "react-router-dom";
+
+
 import './search.css'
 
-export const Search = () => {
-
-  const response = useContext( ItemsContext );
+export const Search = ( { handleSetInputText } ) => {
   
-  const [inputText, setInputText] = useState("");
+  const [input, setInput] = useState("");
+  const inputRef = useRef(null)
 
   const HandleChange = (e) =>{
-    setInputText(e.target.value);
-    console.log(e.target.value);
+    setInput(e.target.value);
   }
 
-  
   const HandleSubmit = (e) =>{
-    e.preventDefault();
-    const searchedData = response.filter((item) => {
-      const regex = new RegExp(`${inputText}`.toLowerCase());
+    handleSetInputText(input);
 
-      return item.title.toLowerCase().match(regex);
-    })
-    console.log(searchedData);
-    setInputText("");
+    setInput("");
   }
 
+  const checkEnter = (e) => {
+    if ( e.code === "Enter" ){
+        inputRef.current.click();
+    }
+  }
+  
     return (
-        <form className="form" onSubmit={ HandleSubmit }>
-          <input value={inputText} onChange={ HandleChange } type="text" className="search" placeholder="Search..."></input>
-          <button type="submit" className="search-button"><img alt="search-svg" className="lupa" src="./lupa.svg"/></button>
-        </form>
+        <>
+            <div className="form">
+                <input value={input} onKeyDown={e => checkEnter(e)} onChange={ HandleChange } type="text" className="search" placeholder="Search..."></input>
+                <Link id="Link" to={`/search/${input}`}>
+                    <button ref={inputRef} onClick={ HandleSubmit } className="search-button"><img alt="search-svg" className="lupa" src="./lupa.svg"/></button>
+                </Link>
+            </div>
+        </>
     )
 }

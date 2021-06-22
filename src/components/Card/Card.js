@@ -11,7 +11,7 @@ export const Card = ( {category, description, image, price, title} ) => {
 
                     <img className="product-img" alt="product" src={ image }/>
                     <div className="product-heart-container">
-                        <button className="product-button-heart"><img className="product-img-heart" alt="heart" src="./darkheart.png"/></button>
+                        <button className="product-button-heart"><img className="product-img-heart" alt="heart" src=".././darkheart.png"/></button>
                     </div>
                 
                 </div>
