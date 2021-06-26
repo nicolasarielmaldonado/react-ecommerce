@@ -1,32 +1,30 @@
-import React, { useState } from 'react'
-import './trending.css'
+import React, { useState } from 'react';
+import './trending.css';
 
 export const Trending = () => {
 
-    const [slider, setSlider] = useState(1)
+    const [slider, setSlider] = useState(1);
 
     const rotacion = () => {
 
         if(slider === 1){
             document.getElementById("firstimg").classList.add("none");
             document.getElementById("secondimg").classList.remove("none");
-            setSlider(2)
+            setSlider(2);
         }else if(slider === 2){
             document.getElementById("secondimg").classList.add("none");
             document.getElementById("thirdimg").classList.remove("none");
-            setSlider(3)
+            setSlider(3);
         }else{
             document.getElementById("thirdimg").classList.add("none");
             document.getElementById("firstimg").classList.remove("none");
-            setSlider(1)
-        }
-         
+            setSlider(1);
+        }    
     }
 
     setTimeout(() => {
         rotacion();
     }, 3000);
-
 
     return (
         <div className="trending">

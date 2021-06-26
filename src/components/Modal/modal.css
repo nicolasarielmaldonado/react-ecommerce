@@ -1,0 +1,137 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(88 88 88 / .5);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 96%;
+    background-color: var(--secondcolor);
+    box-shadow: 2px 2px 0px 1px var(--fourthcolor);
+    overflow: auto;
+    max-height: 600px;
+}
+
+.modal-header{
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto 20px;
+}
+
+.modal-header p{
+    font-size: 0.9em;
+    color: var(--fourthcolor);
+}
+
+.modal-item {
+    margin: 6px auto;
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+}
+
+.thankyou-title {
+    margin-bottom: 30px;
+    font-size: 1.7em;
+    color: var(--fourthcolor);
+}
+
+.title-item{
+    font-size: .8em;
+    width: 30%;
+    margin: 5px 15px 5px 0;
+}
+
+.quantity-item{
+    font-size: .8em;
+    margin: 5px 0;
+    width: 30%;
+}
+
+.price-item{
+    font-size: .8em;
+    width: 30%;
+    margin: 5px 0;
+}
+
+.remove-item{
+    width: 6%;
+}
+
+.button-buy-all{
+    font-family: 'Inter', sans-serif;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--thirdcolor);
+    background-color: var(--fourthcolor);
+    box-shadow: 0px 4px 0px #49363a;
+    border-radius: 1em;
+    padding: 2px 8px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+    -webkit-tap-highlight-color: transparent;
+    margin: 20px 0;
+}
+
+.total-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-price {
+    color: var(--fourthcolor);
+    display: inline;
+    white-space:nowrap;
+}
+
+.remove-button{
+    font-family: 'Inter', sans-serif;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--fourthcolor);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    height: 1.2em;
+    width: 1.2em;
+    padding: 0;
+    box-shadow: 1px 1px 0px 1px var(--fourthcolor);
+    margin-right: 10px;
+}
+
+.close-modal{
+    height: 25px;
+    align-self: flex-end;
+    margin: 10px 10px 0 0;
+    cursor: pointer;
+    filter: invert(26%) sepia(3%) saturate(3779%) hue-rotate(295deg) brightness(99%) contrast(86%);
+}
+
+@media screen and (min-width: 600px) {
+    .modal-container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .modal-container {
+        width: 60%;
+    }
+}

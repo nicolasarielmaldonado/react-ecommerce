@@ -21,11 +21,21 @@ html{
 body{
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
-  background-color: white;
-  /*Regular 400
-  Extra-bold 800 */
+  background-image: url(./assets/bg-final.png);
+  background-size: 280px;
 }
 
 pre {
   font-size: 0.3em;
+}
+
+.div-main {
+  min-height: 900px;
+}
+
+@media screen and (min-width: 1500px){
+  .div-main {
+    width: 80%;
+    margin: auto;
+  }
 }

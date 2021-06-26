@@ -2,7 +2,7 @@ import {dataFake} from './fakeData.js';
 
 export const itemRequest = async() => {
 
-    const URL = `https://fakestoreapi.com/products`;
+    const URL = "https://fakestoreapi.com/products";
 
     console.log("fetch");
 
@@ -10,7 +10,6 @@ export const itemRequest = async() => {
     const data = await resp.json();
 
     const dataFull = ( [ ...data, ...dataFake ] );
-    
-    return dataFull;
 
+    return dataFull;
 }

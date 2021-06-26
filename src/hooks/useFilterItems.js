@@ -1,11 +1,12 @@
 import {useContext, useEffect, useState} from 'react'
-import { ItemsContext } from '../App';
+import { FavoriteContext, ItemsContext } from '../App';
 
 export const useFilterItems = ( category ) => {
 
     const response = useContext( ItemsContext );
+    const { favoriteItems } = useContext( FavoriteContext );
 
-    const [items, setItems] = useState({  
+    const [ items, setItems ] = useState({  
         data: [],
         loading: true
     });
@@ -16,9 +17,22 @@ export const useFilterItems = ( category ) => {
                 data: response,
                 loading: false
             });
+        } else if ( category === "favorites" ){
+            let filteredData = response.filter( ( item )=>{
+                let auxFavItem;
+                favoriteItems.forEach( favItem => {
+                    if ( item.id === favItem  ){
+                        auxFavItem = favItem ;
+                    }
+                });
+                return item.id === auxFavItem;
+            });
+            setItems({
+                data: filteredData,
+                loading: false
+            })
         } else {
-            let filteredData;
-            filteredData = response.filter( item => {
+             let filteredData = response.filter( item => {
                 return ( item.category === category );
             })
             setItems({
@@ -26,8 +40,6 @@ export const useFilterItems = ( category ) => {
                 loading: false
             })
         }
-        
-    }, [ category, response ])
-
+    }, [ category, response, favoriteItems ]);
     return items;
 }

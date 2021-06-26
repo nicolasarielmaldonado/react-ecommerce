@@ -1,14 +1,14 @@
 .container-error {
     width: 80%;
-    margin: auto;
-    border: 1px solid grey;
-    border-radius: 30px;
+    margin: 15px auto;
     padding: 25px;
     margin-bottom: 15px;
-
+    background-color: var(--secondcolor);
+    box-shadow:2px 2px 0px 1px var(--fourthcolor);
 }
 
 .titulo {
+    color: var(--fourthcolor);
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -18,5 +18,6 @@
 }
 
 .list-item {
+    color: var(--fourthcolor);
     margin-bottom: 10px;
 }

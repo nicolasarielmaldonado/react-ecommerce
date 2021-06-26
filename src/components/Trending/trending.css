@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 980px;
     margin: auto;
-    height: 250px;
+    margin-top: 130px;
 }
 
 .trending-image{
@@ -36,15 +36,6 @@
 }
 
 @media screen and (min-width: 650px){
-
-    .trending{
-        height: 300px;
-    }
-
-    .trending-image{
-        height: 300px;    
-    }
-
     .firstimg {
         background-image: url('../../assets/carrousel1.png');
     }

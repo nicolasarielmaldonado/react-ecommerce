@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useFilterItems } from '../../hooks/useFilterItems';
 import { Card } from '../Card/Card';
-
 
 import './cardList.css'
 

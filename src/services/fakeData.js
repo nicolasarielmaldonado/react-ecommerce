@@ -169,7 +169,7 @@ export const dataFake = [
 },
 {
 	title: "MEVECCO Layered Heart Necklace Pendant Handmade 18k Gold",
-	price: 89.95,
+	price: 88.95,
 	id: 42,
 	description: "Length of the first layer:15, second layer length:17, 2 inches extender. Disc Size(0.6 inch).",
 	image: "https://images-na.ssl-images-amazon.com/images/I/71TxUQgwH5L._AC_UY535_.jpg",
