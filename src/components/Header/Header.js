@@ -35,8 +35,8 @@ export const Header = ( {handleSetInputText, favorites, funcToggleCart, itemsCar
         <>
         <header ref={ headerRef } className="header">
             <div className="header-upcontain">
-                <img ref={ menuRef } onClick={ showOrNot } className="menu" src="./menu.png" alt="menu"/>
-                <img className="logo" src="./logo-1.png" alt="logo"/>    
+                <img ref={ menuRef } onClick={ showOrNot } className="menu" src="././menu.png" alt="menu"/>
+                <img className="logo" src="././logo-1.png" alt="logo"/>    
             </div>
             
             <Search handleSetInputText={ handleSetInputText }/>
@@ -55,7 +55,7 @@ export const Header = ( {handleSetInputText, favorites, funcToggleCart, itemsCar
 
         </header>
             <div ref={ popupRef } className="popup-window popup-none"> 
-                <img onClick={ showOrNot } className="cross-icon" alt="cross" src="./cerrar.png"/>
+                <img onClick={ showOrNot } className="cross-icon" alt="cross" src="././cerrar.png"/>
                 <Categories/>
             </div>
         </>
