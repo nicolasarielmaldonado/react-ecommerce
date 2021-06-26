@@ -40,7 +40,7 @@ export const Card = ( { description, image, price, title, id } ) => {
                 <div className="product-img-wrapper">
                     <img className="product-img" alt="product" src={ image }/>
                     <div className="product-heart-container">
-                        <button onClick={handleFav} className="product-button-heart"><img className="product-img-heart" alt="heart" src={`.././${heart}.png`}/></button>
+                        <button onClick={handleFav} className="product-button-heart"><img className="product-img-heart" alt="heart" src={`././${heart}.png`}/></button>
                     </div>               
                 </div>
 

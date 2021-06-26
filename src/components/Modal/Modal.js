@@ -26,7 +26,7 @@ export const Modal = ({ itemsCart, funcToggleCart } ) => {
     return (
         <div className="modal">
             <div className="modal-container">
-                <img src="./cerrar.png" alt="cross" className="close-modal" onClick={ funcToggleCart }/>
+                <img src="././cerrar.png" alt="cross" className="close-modal" onClick={ funcToggleCart }/>
                 <div className="modal-header">
                     <p className="title-item">Product:</p>
                     <p className="price-item">Price:</p>

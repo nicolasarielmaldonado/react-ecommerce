@@ -42,13 +42,13 @@ export const Header = ( {handleSetInputText, favorites, funcToggleCart, itemsCar
             <Search handleSetInputText={ handleSetInputText }/>
 
             <div className="product-cart-container-header" onClick={funcToggleCart}>
-                    <button className="product-button-cart-header"><img className="product-img-cart-header" alt="cart" src=".././cart.png"/></button>
+                    <button className="product-button-cart-header"><img className="product-img-cart-header" alt="cart" src="././cart.png"/></button>
                     <span onClick={funcToggleCart} className="cart-counter">{cartCount}</span>
             </div> 
 
             <Link to={`/favorites`}>
                 <div className="product-heart-container-header">
-                    <button className="product-button-heart-header"><img className="product-img-heart-header" alt="heart" src=".././brownheart.png"/></button>
+                    <button className="product-button-heart-header"><img className="product-img-heart-header" alt="heart" src="././brownheart.png"/></button>
                     <span onClick={funcToggleCart} className="favorites-counter">{favorites.length}</span>
                 </div> 
             </Link>

@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { useFetchItems } from './hooks/useFetchItems';
 import { useSearchItems } from './hooks/useSearchItems';
 
@@ -119,7 +119,7 @@ export function App() {
 
   return (
     <>
-      <Router>
+      <HashRouter>
         <ItemsContext.Provider value={ dataFull }>
           <FavoriteContext.Provider value={{
             favoriteItems: favorites,
@@ -198,7 +198,7 @@ export function App() {
           </FavoriteContext.Provider>
         </ItemsContext.Provider>
 
-      </Router>
+      </HashRouter>
     </>
   );
 }
